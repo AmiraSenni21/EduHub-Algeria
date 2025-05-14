@@ -1,0 +1,661 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100&family=Noto+Naskh+Arabic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100&family=Itim&family=Noto+Naskh+Arabic&display=swap');
+:root{
+  --white: #fff;
+  --purple2: #D9ACF5;
+  --black:#3C4048;
+  --blue: #87CEEB;
+  --purple3: #a460ed;
+  --pink: #f07dea;
+}
+*{
+  font-family: 'Amiri', sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  outline: none; 
+  text-decoration: none;
+  transition: .2s linear;
+}
+*::selection{
+  background-color: var(--purple2);
+  color:var(--white);
+}
+::-webkit-scrollbar{
+  height: .5rem;
+  width: .7rem;
+}
+::-webkit-scrollbar-track{
+  background-color: var(--purple3);
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--purple2);
+  border-radius: 5rem;
+}
+body{
+  height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+  background-color: var(--purple3);
+}
+/****************************** Home Page ****************************/
+.sec1 {
+  position: absolute;
+  top:-30px; left:0; right:0;
+  z-index: -1;
+}
+.header{
+  position: relative;
+  top:0; left:0; right:0;
+  height: 100px;
+}
+.header .flex nav{
+  position: absolute;
+  flex-direction: row-reverse;
+  width:600px;
+  margin:5px 0 30px 730px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .flex .logo{
+  height: 170px;
+  width: 170px;
+  margin: -35px 0 0 0;
+  position: absolute;
+  cursor: pointer;
+}
+.header .flex nav a{
+  color:var(--purple3);
+  font-size: 1.5rem;
+  border-radius: 30px;
+  border: solid 2px var(--white);
+  background: var(--white);
+  padding: 0px 20px;
+  cursor: pointer;
+}
+.header .flex nav a:hover, .header .flex nav a.active{
+  border-radius: 30px;
+  border: solid 2px var(--purple3);
+  background: var(--purple3);
+  color: var(--white);
+}
+#menu-btn{
+  visibility: hidden;
+}
+/************************* Body section ***********************/
+.sec2 {
+  margin-top: 3%;
+  margin-left: 5%;
+  display: flex;
+}
+.sec2 .img1{
+  height: 450px;
+  width: 600px;
+  margin: 15% 0 0 -15%;
+  z-index: 4;
+}
+.Pr_text {
+  position: absolute;
+  margin-left: 35%;
+  margin-top: 6.5%;
+  width: 700px;
+  height: 370px;
+  z-index: 1;
+}
+.Pr_text ul{
+  display: flex;
+  font-size: 3.5rem;
+  color: var(--white);
+  height: 120px;
+  width:670px;
+}
+.Pr_text ul li{
+  left:0;
+  color: var(--white);
+  top:0;
+  position: relative;
+  list-style: none;
+  font-weight: 400;
+}
+.Pr_text ul li:nth-child(2){
+  font-size: 3rem;
+  width: 300px;
+  color: var(--white);
+  margin-left: 370px;
+  margin-top: 15px;
+  height: 100%;
+  direction: rtl;
+  text-align: center;
+}
+.Pr_text ul li:nth-child(1){
+  font-size: 2.5rem;
+  position: absolute;
+  margin: 25px 0 0 150px;
+  width: 290px;
+  height: 80px;
+  color: transparent; /* for make text in strok font*/
+  -webkit-text-stroke: 1px var(--white);
+}
+.Pr_text ul li:nth-child(1)::after{
+  background: var(--purple3);
+  content: ""; /* For hide the text after the left border*/
+  position: absolute;
+  left:0;
+  height: 80px;
+  width: 100%;
+  border-left: solid 2px var(--white);
+  animation: typing 3s steps(14) infinite; /*14 is the number of letters with the space*/
+}
+.Pr_text h6{
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  letter-spacing: .7px;
+  font-size: 1.1rem;
+  color: var(--white);
+  font-weight: 600;
+  width: 600px;
+  margin:30px 0 0 40px;
+  direction: rtl;
+  word-spacing: 7px;
+  line-height: 35px;
+}
+.Pr_text .btns{
+  margin: 40px 130px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.Pr_text .btns button{
+  width: 125px;
+  height: 63px;
+  font-size: 1.3rem;
+  background-color: var(--white);
+  margin: 0 40px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border:solid 5px var(--purple3);
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.Pr_text .btns button:hover{
+  width: 125px;
+  height: 63px;
+  font-size: 1.4rem;
+  background-color: var(--purple2);
+  border:solid 2px var(--purple3);
+}
+.Pr_text .btns button a{
+  padding: 4px 7px;
+  font-size: 1.3rem;
+  color: var(--purple3);
+  position: relative;
+}
+.Pr_text .btns button .a2{
+  padding: 4px 34px;
+  font-size: 1.3rem;
+  color: var(--purple3);
+  position: relative;
+}
+.Pr_text .btns button a:hover{
+  color: white;
+}
+/**************** Footer *****************/
+.sec4 {
+  margin-top: 5%;
+}
+.sec4 svg{
+  position: relative;
+  margin: -5% 0 -3% 0;
+  padding: 0;
+}
+.sec4 .white {
+  position: relative;
+  background-color: var(--white);
+  width: 100%;
+  height: 300px;
+}
+.sec4 .footer{
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: -27%;
+  position: absolute;
+}
+.sec4 .footer h2{
+  font-size: 2rem;
+  margin: 70px 575px;
+  position: absolute;
+  color: var(--purple3);
+}
+.sec4 .footer .img{
+  width: 400px;
+  height: 400px;
+  margin-left: 1000px;
+  margin-top: -40px;
+}
+.sec4 .footer .socialMedia{
+  display: flex;
+  margin: 130px 560px;
+  position: absolute;
+}
+.sec4 .footer .socialMedia img{
+  padding: 20px 0 0 30px;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+}
+.sec4 .footer .Contact{
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  position: absolute;
+}
+.sec4 .footer .Contact div{
+  display: flex;
+  flex-direction: row;
+}
+.sec4 .footer .Contact div span{
+  padding-top: 35px;
+  color: var(--purple3);
+  font-size: 1.3rem;
+  font-family: 'Itim', cursive;
+  cursor: pointer;
+}
+.sec4 .footer .Contact div img{
+  margin: 20px 15px 0 0;
+  width: 40px;
+  height: 50px;
+  cursor: pointer;
+}
+.sec4 .footer .line{
+  width: 420px;
+  height: 2px;
+  position:absolute;
+  margin-right: 480px;
+  margin-top: 300px;
+  background-color: var(--purple2);
+}
+.sec4 .footer h3{
+  position: absolute;
+  margin-right: 520px;
+  margin-top: 300px;
+  color: var(--purple2);
+}
+@keyframes typing{
+  100%{
+    left: 100%;
+  }
+}
+
+@keyframes animate{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+/**************** About Us Page ******************/
+.sec3{
+  margin: 5% 1.5%;
+  background:linear-gradient(rgba(255, 255, 255,0.3),rgba(255, 255, 255,0.3),rgba(255, 255, 255,0.3)); 
+  width: 98%;
+  height: 500px;
+   
+}
+#aboutUs {
+  border: solid 2px var(--purple3);
+}
+.sec3 h2{
+  font-size: 3rem;
+  width: 300px;
+  color: var(--white);
+  margin-left: 13%;
+  padding-top: 1%;
+  direction: rtl;
+  text-align: center;
+  word-spacing: 10px;
+}
+.sec3 .img{
+  width: 500px;
+  position: absolute;
+  margin: 0 0 0 55%;
+}
+.sec3 h6{
+  position: absolute;
+  margin: 1% 0 0 3%;
+  text-align: center;
+  padding-bottom: 30px;
+  width: 600px;
+  height: 370px;
+  z-index: 1;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  letter-spacing: .7px;
+  font-size: 1.1rem;
+  color: var(--white);
+  direction: rtl;
+  word-spacing: 7px;
+  line-height: 35px;
+}
+/********************************** Directure *******************************/
+/****************************** Create Account ****************************/
+.sec7 {
+  border: solid 1px var(--purple2);
+  border-radius: 20px;
+  width: 400px;
+  height: 520px;
+  margin: 5% 35%;
+  background-color: var(--purple2);
+  direction: rtl;
+  align-items: center;
+  justify-content: space-between;
+  overflow-y: hidden;
+}
+.sec7 h1{
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  font-size: 2rem;
+  color: var(--purple3);
+  margin: 30px 26%;
+}
+.sec7 .content{
+  margin-top: 15%;
+  padding-right: 30px;
+}
+.sec7 .content label{
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  color: var(--white);
+  font-size: 1.2rem;
+}
+.sec7 .content input{
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  border: solid 2px var(--white);
+  border-radius: 30px;
+  padding-right: 10px;
+  width: 200px;
+  color: var(--purple2);
+  font-size: 1.2rem;
+}
+.sec7 .content input:focus{
+  border: solid 2px var(--purple3);
+}
+.sec7 .content .wrong{
+  visibility: hidden;
+  font-weight: bold;
+  margin-top: 1%;
+  margin-right: 0;
+  direction: rtl;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  color: #FF0000;
+  font-size: 1rem;
+}
+.sec7 div{
+  margin-top: 5%;
+}
+.sec7 .Que{
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  color: var(--white);
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-top: 9%;
+}
+.sec7 .Que:hover{
+  color: var(--purple3);
+}
+.sec7 .content a{
+  margin-top: 4%;
+  margin-right: 9%;
+  width: 100px;
+  padding: 3px 25px;
+  position: absolute;
+  color: var(--purple3);
+  border: none;
+  background-color: var(--white);
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: 0.5s;
+  z-index: 1000;
+}
+.sec7 .content a:hover{
+  color: var(--white);
+  background-color: var(--purple3);
+}
+/****************************** Chose level *******************************/
+.sec5 {
+  width: 1000px;
+  height: 150px;
+  margin: 15%;
+  padding: 0;
+  background-color: var(--purple3);
+  flex-direction: row-reverse;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sec5 .done{
+  visibility: hidden;
+  font-size: 1.4rem;
+  color: var(--purple3);
+  position: absolute;
+  background-color: var(--white);
+  border: solid 1px var(--white);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15%;
+  margin-right: 10%;
+  padding: 3px 13px;
+  transition: 0.5s;
+}
+.sec5 .mar1{
+  margin-right: 35%;
+}
+.sec5 .mar2{
+  margin-right: 60%;
+}
+.sec5 .div{
+  background-color: var(--purple2);
+  border: solid 4px var(--purple2);
+  width: 275px;
+  height: 120px;
+  margin: 20px;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+.sec5 .div:hover{
+  border: solid 4px white;
+}
+.sec5 .div h1{
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  color: white;
+  font-size: 1.7rem;
+  padding: 25px 35px;
+}
+.next {
+  background-color: var(--white);
+  position: absolute;
+  margin-top: -60px;
+  margin-left: 130px;
+  font-weight: 900;
+  width: 100px;
+  height: 52px;
+  border: solid 2px var(--purple3);
+  cursor: pointer;
+}
+.next:hover {
+  border: solid 2px var(--white);
+}
+.next a{
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  color: var(--purple3);
+  font-size: 1.4rem;
+}
+.finish {
+  font-weight: 900;
+  background-color: var(--white);
+  position: absolute;
+  margin-top: -60px;
+  margin-left: 10px;
+  width: 100px;
+  height: 52px;
+  border: solid 2px var(--purple3);
+  cursor: pointer;
+}
+.finish:hover {
+  border: solid 2px var(--white);
+}
+.finish a{
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  color: var(--purple3);
+  font-size: 1.4rem;
+}
+/*************** Enter information for each year *********************/
+.level {
+  background-color: var(--purple2);
+  font-size: 2.4rem;
+  width: 350px;
+  padding: 10px 50px;
+  margin:7% 37% 3% 37%;
+  color: var(--white);
+}
+.sec6 h2 {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  font-size: 1.7rem;
+  color: var(--white);
+  direction: rtl;
+  padding: 20px 40px;
+}
+table {
+  margin-left: 10%;
+  direction: rtl;
+  border-collapse: collapse;
+  width: 87%;
+}
+td {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  border: solid 2px var(--white);
+}
+tr {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  height: 30px;
+  border: solid 2px var(--white);
+}
+th {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  font-size: 1.2rem;
+  border: solid 2px var(--white);
+}
+td select {
+  width: 160px;
+  height: 40px;
+  background-color: var(--purple3);
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+}
+td select:focus {
+  outline: none;
+}
+td select option {
+  background-color: white; 
+  color: grey;
+}
+th td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+td input{
+  padding-right: 7px;
+  font-size: 1.2rem;
+  width: 160px;
+  height: 40px;
+  border:none;
+  background-color: var(--purple3);
+  color: white;
+}
+td input:focus {
+  outline: none;
+}
+input[type="time"]::-webkit-calendar-picker-indicator{
+  filter: invert(1);
+}
+td .stat{
+  font-size: 1.2rem;
+  padding-right: 10px;
+  width: 120px;
+  height: 60px;
+}
+td .days{
+  font-size: 1.2rem;
+  padding-right: 10px;
+  width: 140px;
+}
+.time{
+  font-size: 1rem;
+  width: 150px;
+  padding-left: 10px;
+}
+th {
+  color: var(--purple3);
+  background-color: var(--purple2);
+}
+.tr3{
+  padding: 0;
+  background-color: var(--purple3);
+}
+td .cost{
+  margin-right: 5px;
+  margin-top: 2px;
+  width: 100px;
+}
+td button{
+  font-size: 1.2rem;
+  color: grey;
+  border: solid 2px var(--purple2);
+  border-radius: 5px;
+  background-color: var(--purple2);
+  color: white;
+  margin: 0 30px;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+td button:hover{
+  border: 3px solid var(--purple2);
+  color: white;
+  background-color: var(--purple2);
+}
+.del1 {
+  margin-bottom: 5px;
+}
+.del3 {
+  font-size: 1.2rem;
+  color: grey;
+  border: solid 2px var(--purple2);
+  border-radius: 5px;
+  background-color: var(--purple2);
+  color: white;
+  margin: 0 30px;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-bottom: 5px;
+}
+.none {
+  background-color: var(--purple3);
+  border: solid 2px var(--purple3);
+}
+.btn button{
+  width: 130px;
+  color: white;
+  background-color: var(--purple2);
+  border: none;
+  font-size: 1.4rem;
+  margin: 30px 50%;
+  margin-bottom: 5%;
+  padding: 5px 15px;
+  cursor: pointer;
+}

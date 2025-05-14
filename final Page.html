@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Final Page</title>
+        <link rel="stylesheet" type="text/css" href="style2.css">
+        <link rel="icon" href="Images/icon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <style>
+            body {
+                background-color: var(--purple3);
+                height: 100vh;
+                overflow: hidden;
+                margin: 0;      
+            }
+            .picture svg {
+                width: 650px;
+                position: absolute;
+                margin-top: -200px;
+                margin-left: 65%;
+                transform: rotate(125deg) scaleY(-1);
+            }
+            .svg-block {
+                height: 100px;
+                margin-top: 20%;
+                transform: scaleX(-1);
+            }
+            .header .flex nav{
+               margin-top: 15px;               
+            }
+            .header .flex nav a{
+               color:var(--white);
+               font-size: 1.5rem;
+               border-radius: 30px;
+               border: solid 2px var(--purple3);
+               background: var(--purple3);
+               padding: 0px 20px;
+               cursor: pointer;
+            }
+            .header .flex nav a:hover{
+               border-radius: 30px;
+               border: solid 2px var(--white);
+               background: var(--white);
+               color: var(--purple3);
+            }
+            .logo1 {
+               height: 70px;
+               width: 120px;
+               margin: 3px;
+               position: absolute;
+               cursor: pointer;
+            }
+            .empty1 {
+                width: 630px;
+                height: 400px;
+                position: absolute;
+                background-color: var(--purple2);
+                margin-left: 73%;
+                margin-top: -75px;
+                transform: rotate(128deg);
+            }
+            .empty2 {
+                width: 700px;
+                height: 220px;
+                position: absolute;
+                background-color: var(--purple2);
+                margin-left: 50%;
+                margin-top: 10px;
+                border: solid 2px var(--purple2);
+                border-radius: 50%;
+                transform: rotate(135deg);
+            }
+            div img {
+                width: 600px;
+                height: 600px;
+                margin-top: -16%;
+                margin-left: 55%;
+                z-index: 1;
+                position: absolute;
+            }
+            .sec9 {
+                width: 800px;
+                height: 400px;
+                background:linear-gradient(rgba(255, 255, 255,0.05),rgba(255, 255, 255,0.05),rgba(255, 255, 255,0.05));
+                margin-top: -27%;
+                margin-left: 7%;
+                border: solid 2px rgba(255, 255, 255,0.1);
+                border-radius: 20px;
+            }
+            .par1 {
+                display: flex;
+                flex-direction: row-reverse;
+                margin-right: 90px;
+                margin-top: 15%;
+            }
+            .par1 h1 {
+                font-size: 2.7rem;
+                color: white;
+                margin-left: 10px;
+            }
+            .par2 {
+                position: absolute;
+                direction: rtl;
+                font-size: 1.2rem;
+                margin-top: -20px;
+                color: var(--purple2);
+                margin-left: 250px;
+            }
+            .btns {
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                margin-top: 7%;
+                margin-left: -10px;
+            }
+            .btns button {
+                cursor: pointer;
+                z-index: 2;
+                margin-left: 30%;
+                width: 270px;
+                height: 50px;
+                background: var(--white);
+                border: solid 2px var(--purple3);
+                border-radius: 10px;
+                transition: 0.4s;
+            }
+            .btns button:hover {
+                color: var(--white);
+                background: var(--purple2);
+                border: solid 2px var(--purple2);
+            }
+            .btns button a {
+                padding: 3px;
+                font-size: 1rem;
+                color: var(--purple2);
+            }
+            .btns button .b2 {
+                padding: 3px 27px;
+                font-size: 1rem;
+                color: var(--purple2);
+            }   
+            .btns button a:hover {
+                color: var(--white);
+            }
+        </style>
+    </head>
+    <body>
+        <!-- header section starts -->
+        <header class="header">
+            <section class="flex">
+                <img class="logo1" src="Images/EduHub1.png">
+    
+                <nav class="navbar">
+                    <a href="index2.html#home">الصفحة الرئيسية</a><br>
+                    <a href="index2.html#aboutUs">من نحن ؟</a><br>
+                    <a href="index2.html#contactUs">تواصل معنا</a><br>
+                </nav>
+            </section>
+        </header>
+        <!-- header section ends -->
+        <section>
+            <div>
+                <img src="Images/happy1.svg" alt="happy">
+            </div>
+            <div class="picture">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#D9ACF5" fill-opacity="1" d="M0,32L48,64C96,96,192,160,288,192C384,224,480,224,576,192C672,160,768,96,864,90.7C960,85,1056,139,1152,165.3C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+            </div>
+            <div class="empty1"></div>
+            <div class="empty2"></div>
+            <div class="svg-block">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#D9ACF5" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,229.3C384,235,480,181,576,181.3C672,181,768,235,864,250.7C960,267,1056,245,1152,234.7C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+            </div>
+        </section>
+        <section class="sec9">
+            <div class="par1">
+                <h1>شكرا على ثقتك في </h1>
+                <h1 class="EduHub">EduHub Algeria</h1>
+            </div>
+            <div class="par2">نتمنى لك يوما سعيدا 💜</div>
+            <div class="btns">
+                <button class="btn2"><a href="index2.html">تسجيل الخروج</a></button>
+                <button><a href="Director.html" class="b2">رجوع</a></button>
+            </div>
+        </section>
+    </body>
+</html>

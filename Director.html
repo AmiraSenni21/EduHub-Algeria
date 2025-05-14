@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Director</title>
+	<link rel="stylesheet" type="text/css" href="style2.css">
+	<link rel="icon" href="Images/icon.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+	<!-- header section starts -->
+	<header class="header">
+       <section class="sec1">
+       	 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFF" fill-opacity="1" d="M0,224L48,202.7C96,181,192,139,288,128C384,117,480,139,576,160C672,181,768,203,864,197.3C960,192,1056,160,1152,138.7C1248,117,1344,107,1392,101.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+       </section>
+	   <section class="flex">
+
+	       <img class="logo" src="Images/EduHub.png">
+
+		    <nav class="navbar">
+				<a href="index2.html#home">الصفحة الرئيسية</a><br>
+				<a href="index2.html#aboutUs">من نحن ؟</a><br>
+				<a href="index2.html#contactUs">تواصل معنا</a><br>
+		    </nav>
+
+	      <div id="menu-btn" class="fas fa-bars"></div>
+	   </section>
+	</header>
+    <!-- header section ends -->
+    <!-- Body section starts -->
+    <section class="sec5">
+    	<div class="done">✔</div>
+    	<div class="div">
+    		<h1>التعليم الإبتدائي</h1>
+    	</div>
+    	<div class="done mar1">✔</div>
+    	<div class="div">
+    		<h1>التعليم المتوسط</h1>
+    	</div>
+    	<div class="done mar2">✔</div>
+    	<div class="div">
+    		<h1>التعليم الثانوي</h1>
+    	</div>
+    </section>
+    <div>
+		<button class="finish" id="finish"><a href="final Page.html">إنتهى </a></button>
+    	<button class="next" id="next"><a>التالي </a></button>
+    </div>
+    <!-- Body section ends -->
+
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript">
+		const Div = document.getElementsByClassName('div');
+        const Done = document.getElementsByClassName("done");
+
+		Done[0].style.visibility = window.localStorage.getItem(window.localStorage.getItem("currentAccount")+" vb0");
+		Done[1].style.visibility = window.localStorage.getItem(window.localStorage.getItem("currentAccount")+" vb1");
+		Done[2].style.visibility = window.localStorage.getItem(window.localStorage.getItem("currentAccount")+" vb2");
+		
+		Div[0].onclick = function (){
+			'use strict';
+			Div[0].style.border = "solid 4px white";
+			Div[1].style.border = "solid 4px var(--purple2)";
+			Div[2].style.border = "solid 4px var(--purple2)";
+		};
+		Div[1].onclick = function (){
+			'use strict';
+			Div[0].style.border = "solid 4px var(--purple2)";
+			Div[1].style.border = "solid 4px white";
+			Div[2].style.border = "solid 4px var(--purple2)";
+		};
+		Div[2].onclick = function (){
+			'use strict';
+			Div[0].style.border = "solid 4px var(--purple2)";
+			Div[1].style.border = "solid 4px var(--purple2)";
+			Div[2].style.border = "solid 4px white";
+		};
+
+		Next.onclick = function () {
+			if(Div[0].style.borderColor == "white"){
+			    Next.children[0].setAttribute("href","Primair.html");
+			}else if (Div[1].style.borderColor == "white"){ 
+				Next.children[0].setAttribute("href","cem.html");
+			}else if (Div[2].style.borderColor == "white"){ 
+				Next.children[0].setAttribute("href","lycee.html");
+			}else{
+				alert("يجب عليك إختيار مستوى معين لإكمال باقي الخطوات.");
+			}
+		}
+        
+        // Finish.onclick = function () {
+		// 	for(var i=0; i<3; i++){
+		// 		if(window.localStorage.getItem(window.localStorage.getItem('currentAccount')+' vb'+i) == null){
+		// 			alert('الرجاء إدخال المعلومات لكل المستويات الدراسية.');
+		// 			break;
+		// 		}else if((window.localStorage.getItem(window.localStorage.getItem('currentAccount')+' vb0') == "visible") && (window.localStorage.getItem(window.localStorage.getItem('currentAccount')+' vb1') == "visible") && (window.localStorage.getItem(window.localStorage.getItem('currentAccount')+' vb2') == "visible")){
+		// 			Finish.children[0].setAttribute("href","final Page.html");
+		// 		}
+		// 	}
+		// }
+    </script>
+</body>
+</html>

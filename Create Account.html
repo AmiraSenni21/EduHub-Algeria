@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+	<link rel="stylesheet" type="text/css" href="style2.css">
+	<link rel="icon" href="Images/icon.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <!-- Body section starts -->
+        <section class="sec7">
+       	    <h1>إنشاء حساب</h1>
+       	    <div class="content">
+	       	  	<div>
+		       	  	<label>إسم المستخدم :</label>
+		       	  	<input type="text" name="" style="margin-right: 5px;"><br>
+	       	  	</div>
+	       	  	<div>
+		       	  	<label>كلمة المرور :</label>
+		       	  	<input type="password" name="" style="margin-right: 50px;">
+		       	  	<br>
+		       	</div>
+		       	<div class="password">
+		       	  	<label>تأكيد كلمة المرور :</label>
+		       	  	<input type="password" name="">
+		       	  	<p class="wrong">✖ يجب عليك إدخال كلمة السر</p>
+		       	</div>
+		       	<p class="Que" id="Que">هل لديك حساب بالفعل ؟</p>
+		       	<a id="SignUp">تسجيل</a>
+       	    </div>
+        </section>
+    <!-- Body section ends -->
+    <script type="text/javascript">
+    	const SignUp = document.getElementById('SignUp');
+		const Input = document.getElementsByTagName('input');
+		const Wrong = document.getElementsByClassName('wrong');
+		const Que = document.getElementById('Que');
+		const title = document.getElementsByTagName('h1');
+		const password = document.getElementsByClassName('password');
+		const Sec7 = document.getElementsByClassName('sec7'); 
+
+        //window.localStorage.setItem("i",0);
+		
+		SignUp.onclick = function (){
+		    if (Input[0].value == "") {
+               Wrong[0].style.visibility = "visible";
+               Wrong[0].innerHTML = "✖ يجب عليك إدخال إسم المستخدم";
+		    }else if(password[0].style.visibility == "hidden"){ 
+				if(Input[1].value == ""){
+					Wrong[0].style.visibility = "visible";
+					Wrong[0].innerHTML = "✖ يجب عليك إدخال كلمة السر";
+				}else{
+					for(var j=0; j<30; j++){ 
+						if(Input[0].value===window.localStorage.getItem("userName"+j)){
+							if(Input[1].value===window.localStorage.getItem("password"+j)){
+								console.log('yes');
+								Wrong[0].style.visibility = "hidden";
+								SignUp.setAttribute("href","School%20Informations.html");
+								break;
+							}else{
+								console.log('No');
+								Wrong[0].style.visibility = "visible";
+								Wrong[0].innerHTML = "✖ خطأ في كلمة السر";
+							}
+							break;
+						}else{
+							Wrong[0].style.visibility = "visible";
+							Wrong[0].innerHTML = "✖ خطأ في إسم المستخدم";
+						}
+				    } 
+				}
+			}else if((Input[1].value == "") || (Input[2].value == "")){
+               Wrong[0].style.visibility = "visible";
+               Wrong[0].innerHTML = "✖ يجب عليك إدخال كلمة السر";
+		    }else if (Input[1].value != Input[2].value) {
+		       Input[1].value = "";
+		       Input[2].value = "";
+               Wrong[0].style.visibility = "visible";
+               Wrong[0].innerHTML = "✖ كلمتا المرور غير متطابقتان";
+		    }else {
+			    if (password[0].style.visibility!=="visible"){
+					Wrong[0].style.visibility = "hidden";
+					window.localStorage.setItem("userName"+parseInt(window.localStorage.getItem("i")),Input[0].value);
+					window.localStorage.setItem("password"+parseInt(window.localStorage.getItem("i")),Input[1].value);
+					window.localStorage.setItem("i",parseInt(window.localStorage.getItem("i"))+1);
+					SignUp.setAttribute("href","School%20Informations.html");
+			    }else {
+					alert('there is error!');
+				}
+		    }
+			window.localStorage.setItem("currentAccount", Input[0].value);
+        }
+
+		Que.onclick = function() {
+			Wrong[0].innerHTML = "";
+            title[0].textContent = "تسجيل الدخول";
+			title[0].style.fontSize = "1.5rem";
+			password[0].style.transition = "0.05s";
+            password[0].style.visibility = "hidden";
+			this.textContent = "هل نسيت كلمة السر؟"
+			this.style.marginTop = "10px";
+            Sec7[0].style.height = "420px";
+			Sec7[0].style.marginTop  = "10%";
+			Wrong[0].style.marginTop = "-50px";
+		}
+    </script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

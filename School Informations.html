@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>School Informations</title>
+	<link rel="stylesheet" type="text/css" href="style2.css">
+	<link rel="icon" href="Images/icon.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<style type="text/css">
+		.sec8 {
+		  margin: 4%;
+		  direction: rtl;
+		}
+		.manger {
+		  background-color: var(--purple2);
+		  font-size: 2.4rem;
+		  width: 350px;
+		  padding: 10px 60px;
+		  margin:7% 37% 3% 37%;
+		  color: var(--white);
+		}
+		.all{
+		  display: flex;
+		  flex-direction: row;
+		  border: none;
+		  font-size: .9rem;
+		  margin-top: 3%;
+		  color: grey;
+		}
+		select{
+		  padding: 0 5px;
+		  direction: rtl;
+		  border: none;
+		  margin-left: 80px;
+		  font-size: 1.2rem;
+		  width: 250px;
+		  height: 40px;
+		  color: grey;
+		}
+		select:hover{
+		  padding: 0 5px;
+		  direction: rtl;
+		  border: none;
+		  margin-left: 80px;
+		  font-size: 1.2rem;
+		  width: 250px;
+		  height: 40px;
+		  color: grey;
+		}
+		select option:nth-child(1){
+		  display: none;
+		}
+		.sec8 p{
+		  margin-bottom: -2%;
+		  padding-right: 0px;
+		  font-size: 1.3rem;
+		  color: white;
+		  direction: rtl;
+		}
+		.infor {
+		  margin-top: 1%;
+		  display: flex;
+		  flex-direction: row;
+		}
+		.infor div{
+		  margin-left: 80px; 
+		}
+		.infor div input{
+		  border: solid 2px white;
+		  padding-right: 10px;
+		  font-size: 1.2rem;
+		  width: 250px;
+		  height: 40px;
+		  color: grey;
+		}
+		.infor div p{
+		  color: white;
+		  margin-bottom: 2%;
+		  padding-right: 0px;
+		  font-size: 1.3rem;
+		  direction: rtl;
+		}
+		.infor .input-container {
+		  width: 240px;
+		  position: relative;
+		  margin-left: 10px;
+		}
+		.infor .input-container input{
+		  padding-right: 10px;
+		  height: 40px;
+		  border: solid 2px white;
+		  color: grey;
+		}
+		.infor .input-icon {
+		  padding: 3px;
+		  position: absolute;
+		  left: -5px;
+		  top: 50%;
+		  transform: translateY(-50%);
+		  z-index: 1;
+		}
+		.infor .input-icon img {
+		  margin-top: 13px;
+		  margin-left: -10px;
+		  padding: 0px;
+		  border-right: 7px solid var(--purple3);
+		  height: 40px;
+		  width: 45px;
+		}
+		.text {
+		  margin-top: 5%; 
+		}
+		.text textarea{
+		  padding-right: 10px;
+		  color: grey;
+		  font-size: 1.2rem;
+		  margin: 40px 0;
+		  margin-bottom: 10px;
+		}
+		.text p{
+		  margin-top: -1.5%;
+		}
+		.svg{
+			position: absolute;
+			width: 600px;
+			height: 600px;
+			margin: -50% 5%;
+		}
+		.nextInfo {
+			background-color: var(--white);
+			position: absolute;
+			margin: -90px 0 0 10px;
+			font-weight: 900;
+			width: 100px;
+			height: 52px;
+			border: solid 2px var(--purple3);
+			cursor: pointer;
+		}
+		.nextInfo a{
+			font-family: 'IBM Plex Sans Arabic', sans-serif;
+			color: var(--purple3);
+			font-size: 1.4rem;
+		}
+		.nextInfo:hover {
+			border: solid 2px var(--white);
+		}
+	</style>
+</head>
+<body>
+    <!-- header section starts -->
+	<header class="header">
+		<section class="sec1">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFF" fill-opacity="1" d="M0,224L48,202.7C96,181,192,139,288,128C384,117,480,139,576,160C672,181,768,203,864,197.3C960,192,1056,160,1152,138.7C1248,117,1344,107,1392,101.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+		</section>
+		<section class="flex">
+ 
+			<img class="logo" src="Images/EduHub.png">
+ 
+			<nav class="navbar">
+			   <a href="index2.html#home">الصفحة الرئيسية</a><br>
+			   <a href="index2.html#aboutUs">من نحن ؟</a><br>
+			   <a href="index2.html#contactUs">تواصل معنا</a><br>
+			</nav>
+
+		</section>
+	</header>
+	<!-- header section ends -->
+
+	<h1 class="manger">معلومات أولية </h1>
+	<section class="sec8">
+		<p>أين تتواجد مدرستك الخاصة :</p>
+		<div class="all">
+			<select id="sel4">
+				<option value="الولاية"><a>الولاية</a></option>
+				<option value="Adrar"><a>أدرار</a></option>
+				<option value="Chlef"><a>شلف</a></option>
+				<option value="Laghout"><a>الأغواط</a></option>
+				<option value="OumElBouaghi"><a>أم البواقي</a></option>
+				<option value="Batna"><a>باتنة</a></option>
+			</select><br>
+			<select id="sel5">
+				<option value="الدائرة"><a>الدائرة</a></option>
+			</select>
+		</div>
+		<div class="infor">
+			<div>
+			    <p>إسم المدرسة :</p>
+			    <input id="SchName" type="text" name="name">
+			</div>
+			<div>
+			    <p>إسمك الكامل :</p>
+			    <input id="DirName" type="text" name="name">
+			</div>
+		</div>
+		<div class="infor">
+			<div>
+				<p>رقم الهاتف 1 :</p>
+				<div class="input-container">
+					<span class="input-icon">
+					<!-- <img src="Images/dz1.png" alt="Algeria Flag"> -->
+					</span>
+					<input id="Nbr1" type="tel" class="phone-input">
+				</div>
+			</div>
+			<div>
+				<p>رقم الهاتف 2 (إختياري) :</p>
+				<div class="input-container">
+					<span class="input-icon">
+					<!-- <img src="Images/dz1.png" alt="Algeria Flag"> -->
+					</span>
+					<input id="Nbr2" type="tel" class="phone-input">
+				</div>
+			</div>
+		</div>
+		<div class="text">
+		    <p>قدم وصفا دقيقا لمكان المدرسة :</p>
+			<textarea id="Tarea" rows="4" cols="50"></textarea>
+		</div>
+	</section>
+	<section class="svg">
+		<img src="Images/bro1.svg">
+	</section>
+	<button class="nextInfo" id="nextInfo"><a>التالي </a></button>
+	<script type="text/javascript" src="script2.js"></script>
+</body>
+</html>
